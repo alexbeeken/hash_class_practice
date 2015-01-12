@@ -53,6 +53,7 @@ describe(MyHash) do
 
   # ===================================================
 
+
   describe("#merge") do
     it("returns all unique keys with associated values") do
       test_hash = MyHash.new()
@@ -61,7 +62,7 @@ describe(MyHash) do
       test_hash.store("dog", "furry")
       test_hash2.store("lion", "big")
       test_hash2.store("bear", "friendly")
-      expect(test_hash.merge(test_hash2)).to(eq(["kitten", "cute", "dog", "furry", "lion", "big", "bear", "friendly"]))
+      expect(test_hash.merge(test_hash2)).to(eq([["kitten", "cute"], ["dog", "furry"], ["lion", "big"], ["bear", "friendly"]]))
     end
   end
 
@@ -73,7 +74,7 @@ describe(MyHash) do
       test_hash.store("dog", "furry")
       test_hash2.store("kitten", "big")
       test_hash2.store("bear", "friendly")
-      expect(test_hash.merge(test_hash2)).to(eq(["kitten", "big", "dog", "furry", "bear", "friendly"]))
+      expect(test_hash.merge(test_hash2)).to(eq([["kitten", "big"], ["dog", "furry"], ["bear", "friendly"]]))
     end
   end
 
