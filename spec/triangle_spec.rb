@@ -1,3 +1,4 @@
+=begin
 require('rspec')
 require('triangle')
 require('pry')
@@ -11,3 +12,4 @@ describe(Triangle) do
  end
 
 end
+=end
