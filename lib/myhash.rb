@@ -1,3 +1,4 @@
+
 class MyHash
 
   define_method(:initialize) do

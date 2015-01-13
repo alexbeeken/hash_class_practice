@@ -1,0 +1,33 @@
+define_method(:merge) do |my_hash|
+    init_temp = @init
+
+    my_hash.get_array.each_index() do |element|
+      if(element.even?)
+
+puts("Element Loop is #{element}, word is #{my_hash.get_array[element]}")
+
+        @init.each() do {|element2|}
+
+#puts("Element2 Loop is #{element2} word is #{@init[element2]}")
+
+          if(@init.index(element2).even?)
+
+puts("line 34: #{element2.even?}")
+puts("line 35: #{(init_temp[element2]) == (my_hash.get_array[element])}")
+
+            if(init_temp[element2]==my_hash.get_array[element])
+puts("line 37")
+              init_temp.insert(@init.index(element2)+1, my_hash.get_array[element+1])
+puts("line 40 init_temp is #{init_temp}")
+            end
+          end
+          if (element2 <= (my_hash.get_array.length))
+          init_temp.insert(-1, my_hash.get_array[element])
+          init_temp.insert(-1, my_hash.get_array[element+1])
+
+        end
+end
+  end
+  init_temp
+end
+end

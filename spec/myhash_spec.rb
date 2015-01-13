@@ -1,3 +1,4 @@
+=begin
 require('rspec')
 require('myhash')
 require('pry')
@@ -89,3 +90,4 @@ describe(MyHash) do
 end
 
 end
+=end
